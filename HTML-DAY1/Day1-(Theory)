@@ -1,0 +1,69 @@
+DAY1:
+<!-- 
+    1.) HTML staticc page have two extension :  ".html" or ".htm"  (But generally ".html" is recommended)
+        FileName Standards: (eg: index.html)
+            - Primary Name: 8 chars 
+            - Secondary Name(OR Extension): 3 chars
+
+        -> Note: Both are same(.html and .htm), But .htm is a per standards, Some software only follows the standards (eg: tutorials point has ".htm" extension)
+        -> Note2: HTML can be designed with MS Word, Powerpoint, Excel -> just "save as webpage" while saving it.
+-->
+
+
+<!-- 
+    2.) Static Page starts with document declaration:
+-->
+        <!DOCTYPE html> <!-- to tell the parser, that which version of HTML we are using. <!DOCTYPE html> tells the Engine/Browser that we are using HTML5 ,therefore, the browser also uses HTML5 parser.
+                        if it(<!DOCTYPE html>) is not used html is of older versions(therfore not supporting some functions).
+                        <!DOCTYPE html> : Not a DOCTYPE, it is HTML(HTML5). OR It tells that "it is not a tag, it is a document declaration." -->
+        <!-- NOTE:
+            <> :tells that it is a tag/token
+            <!> :tells that it is not a tag/token
+        -->
+
+
+<!-- 
+    3.) Page must contain DOCUMENT SCOPE:
+        - Many "<html></html>" in same page is allowed, But note that the browser merges two(or multiple) html's into one html body. 
+-->
+
+<!-- 
+    4.) A document can display content belonging to various relegional languages:
+-->
+
+        <html lang="en-IN"></html> <!-- language is English Indian -->
+                                   <!-- USE:
+                                        price in Rupees(₹) -> "en-IN" (English Indian)
+                                        price in Dollars($) -> "en-US" (English USA)
+                                    -->
+
+<!--
+    5.) Every html page has two sections:
+    - html: not displayed in Browser but it is used in memory of browser -> ∵ we are not using head content, ∴ it(html content) is not displayed for better performance.
+    - body: displayed directly into the browser.
+
+        | HTML Page|       | Browser        |    | Memory         |
+        | - head   |   =>  | - body(content)| =  | - head(content)|
+        | - body   |       |                |    |                |
+-->
+
+<!--
+    head
+    - It contains content intended to load into browser memory.
+    - It contains: title, link, meta, script, style.
+-->
+
+<!--
+    Head:
+    1.) Title:
+        - It contains the text to display in browser's title.
+        - It is also used in Bookmarks. (when you bookmark a page you save it(page) using this(anything written inside title tag) name only by default.)
+    
+    2.) Link:
+        - used to link external file to webpage (- Shortcut-icon - also known as favicon ->"the icon at side of title of the page"   OR   
+                                                 - Stylesheet)
+            a.) Creating Shotuct icon/ favicon:
+                - favicon must have extension ".ico"
+                - favicon must be between 16 x 16 and 32 x 32 pixel size.
+
+-->
