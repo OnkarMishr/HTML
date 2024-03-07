@@ -1,0 +1,32 @@
+<!--Background Image of Netflix
+    
+    Q.) Can we make background image lighter, darker or transparent?
+        Ans: No, not directly but with some tricks we can achieve it.
+        - you cannot define by using css attributes.
+        - you can impliment this by using alpha color with container.
+
+        rgba - red (0 to 255): 0 - darker , 255 - lighter
+             - blue (0 to 255)
+             - green (0 to 255)
+             - alpha (0 to 1): for trancparency: 0 - no transparency(as it is) , 1 - full transparency(full color over image)
+
+             eg:  rgba(0, 0, 0, 0.6) - denotes 0,0,0 - black color, with 0.6 transparency
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0px;
+            }
+            div{
+                height: 768px;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        </style>
+    </head>
+    <body background="../images/netflixbg.png">
+        <div></div>
+    </body>
+</html>

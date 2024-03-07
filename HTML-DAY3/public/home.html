@@ -1,0 +1,44 @@
+<!-- BODY background:
+
+    1.) If both the resource/image and file are in same folder, then we can directly write image-name or ./image-name.
+        "./" - denotes that your image is in same folder location as of your file, i.e,
+
+        project folder
+            - home.html 
+            - shoe.jpg(image)
+    
+    2.) "../FOLDER_PATH/<image-name>" 
+        - "../" is used to go one step level back(come out of current folder), i.e,
+        
+        project folder
+            - public
+                - home.html 
+            - images
+                - shoe.jpg(image)
+    - NOTE: By default images will be displayed according to there image size
+      (by default field ) i.e, 
+      Page______________________________________________
+        | image(I) |   I    |   I   |   I    |   I   |
+        ----------------------------------------------
+        |   I      |   I    |   I   |   I    |   I   |
+        ----------------------------------------------
+        we can control these by css only.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backgorund image of body</title>
+    </head>
+    <!-- eg for (1) :
+        <body background="shoe.jpg"> or 
+        <body background="./shoe.jpg"> 
+    -->
+
+    <!-- 
+        eg for (2) : 
+    -->
+    <body background="../images/shoe.jpg"> 
+        go to <a href="home1.html">Adjust background</a>
+    </body>
+</html>
