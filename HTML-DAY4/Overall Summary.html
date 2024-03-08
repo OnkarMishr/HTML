@@ -1,0 +1,139 @@
+<!-- 
+    <!-- Summary till now:
+    1. head
+        - title, link, meta, style, script
+    2. body
+        - bgcolor, text, background, leftmargin, rightmargin, topmargin, bottommargin, align, alink, vlink
+
+------------------html--head--and--body--END-----------------------------------------------------------
+
+
+BODY SEMANTICS ELEMENT:
+    - how to design body elements
+    - upto html4 body section is designed by using Tables.
+    - Issues with tables:
+
+        1. Tables leads to a situation called "KISS-OF-DEATH"
+        - It means that " it is not sure when it(table parts) comes" ,i.e, it is not sure that which part of table will come first(order of table loading is not specefic, it is randomly coming on loading of table)
+        - some abnormal loading is there, i.e, some left loading, some right loading, bottom and some top loading is there., i.e, there is no order of loading.
+        - this situation is kiss of death.
+
+        2. Tables are not SEO friendly.
+        eg:         Page
+            +--------------------+
+            |       +---+        |
+            |       |car|        |
+            |       +---+        |   
+            |   Fig: Range Rover |<-----caption
+            |       +----+       |
+            |       |rose|       |
+            |       +----+       |
+            +--------------------+   
+
+            If somebody searches on google "Range Rover", then which picture/image will robots(google crawlers) show? above or below the captions?
+            since, robots cannot scan/recognise an image, therefore, wrong information is shown. (therefore making our website SEO unfriendly.)
+
+    - HTML5 introduces new elements into body section ,to design a layout that can be SEO friendly. the new elements of HTML5 body section are as folloes:
+        1. aside        5. figcaption   9. main     13.span  -------+
+        2. article      6. header       10. nav                     |----=> Semantic Elements: elementsfor specefic purpose,
+        3. dialogue     7. footer       11. menu                    |           like for better SEO, etc.
+        4. figure       8. section      12. div  -------------------+
+
+    - Note: all these elements are containers, means you can put any content inside it.
+        eg: <aside>
+                ...your content(text, picture, graphic, etc.)
+            </aside>
+        
+        +-----------------------------------------------------------------------------------------------------------+
+        |   +---------------------------------------------------------------------------------------------------+   |  
+        |   |   header                                                                                          |   |
+        |   |   +----------------------------------------------------------------+                              |   |
+        |   |   |   nav                                                          |                              |   |
+        |   |   |   +-------------------------------------------------------+    |                              |   |
+        |   |   |   |   menu          Home    login   register   mobile     |    |                              |   |
+        |   |   |   +-------------------------------------------------------+    |                              |   |
+        |   |   +----------------------------------------------------------------+                              |   |
+        |   +---------------------------------------------------------------------------------------------------+   |
+        |                                                                                                           |
+        |   +---------------------------------------------------------------------------------------------------    |
+        |   |   section                                                                                         |   |           
+        |   |   +-------------------+           +---------------+           +---------------+                   |   |
+        |   |   |   nav             |           |   main        |           |   aside       |                   |   |
+        |   |   |   +-----------+   |           +---------------+           |    ads...     |                   |   |   
+        |   |   |   |   menu    |   |           +---------------+           +---------------+                   |   |
+        |   |   |   |           |   |           | figure        |                                               |   |
+        |   |   |   |   home    |   |           |   +-------+   |                                               |   |
+        |   |   |   |   login   |   |           |   |       |   |                                               |   |
+        |   |   |   |   mobile  |   |           |   +-------+   |                                               |   |        
+        |   |   |   +-----------+   |           |   figcaption  |                                               |   |
+        |   |   +-------------------+           +---------------+                                               |   |
+        |   |                                   +---------------+           +-------------------------------+   |   |   
+        |   |                                   |   article     |           | dialogue box like chat box    |   |   |
+        |   |                                   +---------------+           +(OO)---------------------------+   |   |
+        |   |                                                                 /\                                |   |   
+        |   +---------------------------------------------------------------------------------------------------+   |                                                           
+        |                                                                                                           |
+        |   +---------------------------------------------------------------------------------------------------+   |
+        |   |   footer                                                                                          |   |
+        |   +---------------------------------------------------------------------------------------------------+   |
+        +-----------------------------------------------------------------------------------------------------------+
+
+    - This all are SEO friendly, but are not amndatory to put on your page.
+        - header: whatever you have to show at the top part/margin of the page.
+        - footer: whatever you have to show at the bottom part/margin of the page.
+        - section: anything between header and footer is inside section.
+        - main: has our main content.
+        - figure & figcaption: issue2 solved, every figure is having it's caption.
+        - article: highlights/some information about your site.
+        - aside: content which is not related to our site like ads.
+        - dialouge (optional): opens when require(popup onclick/ and close if no use)
+            eg: chatbot, comment box, login, register, etc.
+            - Note: <dialouge> box content is not shown until you write OPEN inside it, i.e, <dialog open>.
+        
+        - div & span: are also containers.
+            div: defines block content(one below another). - generally used for categories
+            span: defines inline content(one after another). - used for inline content.
+
+            eg: <div>                               +-----------DIV-+
+                    <div>topic1</div>               |   topic1      |
+                    <div>topic2</div>               |   topic2      |
+                </div>                              +---------------+
+
+                <div>                               +------------SPAN--+
+                    <span>topic1</span>             |   topic1  topic2 |
+                    <span>topic2</span>             +------------------+
+                </div>                              
+
+            eg(use of span):
+                <div>                                               +-----------------------------------------+
+                    for more details visit <span>site</span>        | for more details visit site             |<---note that "site" comes in same line.(we can style this span without affecting any other content)   
+                </div>                                              +-----------------------------------------+
+
+    - NOTE: This all are SEO friendly but not user freindly, means we have to design all these tags using CSS and JS.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>topic1</div>
+            <div>topic2</div>
+        </div>
+--------------
+        <div>
+            <span>topic1</span>
+            <span>topic2</span>
+        </div>
+--------------
+        <div>
+            For more details visit our <span>site</span>.
+        </div>
+    </body>
+</html>
