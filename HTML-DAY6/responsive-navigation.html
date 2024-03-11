@@ -1,0 +1,57 @@
+<!--
+    RESPONSIVE NAVIGATION BAR
+        - nav bar should change it's orientation according to device screen
+        - you can define this by css '@media' queries.
+        
+        +---------------+       +---+
+        |  landscape    |       | p |
+        +---------------+       | o |
+                                | t |
+                                | r |
+                                | a |
+                                | i |
+                                | t |
+                                +---+
+
+        - NOTE: 
+            if every time we want side by side then we use span,
+            if every time we want one below other than we use div,
+            but if we want to change the orientation then we have to use div and then change them with css.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            nav div{
+                border: 2px solid red;
+                background-color: tomato;
+                color: white;
+                padding: 5px;
+                margin-bottom: 2px;
+                width: 150px;
+            }
+
+            @media  screen and (orientation:landscape) {
+                /* if media is screen and orientaion is landscape then do the following */
+                /* horizontal */
+                    nav{
+                        display: flex; /* OR inline */
+                    }
+                    nav div{
+                        margin-right: 20px;
+                    }
+                /* horizontal */    
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav>   
+            <div>Home</div>
+            <div>About</div>
+            <div>Contact</div>
+        </nav>
+    </body>
+</html>

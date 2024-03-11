@@ -1,0 +1,51 @@
+<!--
+    Mouse Hover Effect
+        - you can apply by using ":hover"
+            syntax:
+                div{} -> Normal
+                div:hover{} -> on mouse hover
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            nav div{
+                border: 1px solid red;
+                width: 150px;
+                margin-bottom: 20px;
+                padding: 5px;
+                border-radius: 20px;
+                font-size: 20px; /*note: this will also increase icon size. */
+                /* background-color: red; */
+                transition: 2s; /* after hover removed, it will take delay to restore. */
+                                /* try 2ms */
+            }
+            #icon{
+                color: red;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+            nav div:hover{
+                background-color: black;
+                color: white;
+                font-size: 25px;
+                transition: 2s; /* try 2ms */
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <span id="icon" class="bi bi-bell"></span><span>Notification</span> 
+            </div>
+            <div>
+                <span id="icon" class="bi bi-alarm-fill"></span><span>Alerts</span> 
+            </div>
+            <div>
+                <span id="icon" class="bi bi-youtube"></span><span>Videos</span> 
+            </div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!-- 
+    VERTICAL NAVIGATION:
+
+    HORIZONTAL NAVIGATION
+        - don't convert div to span, because if persoin watches our site in mobile, then it should be seen one below other, but if rotates his mobile(landscape) then it should be seen side by side.
+        - don't change the element,change the orientation.
+          eg: 
+            nav{
+               display: flex; /* OR inline */
+            }
+            nav div{
+                margin-right: 20px;
+            }
+
+    -->
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            nav div{
+                border: 2px solid red;
+                background-color: tomato;
+                color: white;
+                padding: 5px;
+                margin-bottom: 2px;
+                width: 150px;
+            }
+
+            /* horizontal */
+            nav{
+                display: flex; /* OR inline */
+            }
+            nav div{
+                margin-right: 20px;
+            }
+            /* horizontal */
+        </style>
+    </head>
+    <body>
+        <nav>   
+            <div>Home</div>
+            <div>About</div>
+            <div>Contact</div>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!-- 
+   columns can be designed using :
+    a.) display:grid -> every column are independent and content of one column are only for that column.
+                     -> every coloumn is individual.
+                     -> content of one column will not span to next column.
+
+                    display: grid
+        +-----------------------------------+   ----+
+        |     a     |           |           |       |
+        |     bc    |           |           |       |
+        |    abc    |           |           |       |-> max height 500 px
+        |    abcd   |           |           |       |
+        |     abc   |           |           |       |
+        |     abc   |           |           |       |
+        +-----abc---------------------------+  -----+
+              abc                                    -> after that if content added, then content will come out and continue below
+
+    b.) columns: -> it is used for continuous columns.
+                 -> the content will span to next column when it fits the previous.
+
+                 columns: 3; -> make 3 columns
+        +-----------------------------------+   ----+
+        |     a     |    abc    |           |       |
+        |     bc    |    abc    |           |       |
+        |    abc    |    abc    |           |       |-> max height 500 px
+        |    abcd   |    abc    |           |       |
+        |     abc   |           |           |       |
+        |     abc   |           |           |       |
+        +-----------------------------------+  -----+
+       after content   ^ It will 
+       fits in column  span to next                  -> eg: this atre used in newspapers, etc.
+                         column.
+
+
+    --> 
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                #container{
+                    display: grid;
+                    grid-template-columns: 4fr 4fr 4fr;
+                    border: 2px solid red;
+                    height: 150px;
+                    padding: 5px;
+                }
+                
+                #container div{
+                    border-left:2px dashed tomato;
+                    text-align: center;
+                }
+
+                #container2{
+                    columns: 3;
+                    border: 2px solid blue;
+                    height: 150px;
+                    padding: 5px;
+                }
+
+                #container2 div{
+                    border-left:2px dashed lightblue;
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="container">
+                <div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+
+                </div>
+                <div></div>
+                <div></div>
+            </div> <br><br><br>
+
+            <div id="container2">
+                <div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+                    <div>abc</div>
+
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </body>
+    </html>
